@@ -1,5 +1,5 @@
 from django.contrib import admin
-from agenda.contato.models import contato
+from agenda.contato.models import contato, tarefa
 
 
 class contatoAdmin(admin.ModelAdmin):
@@ -10,3 +10,12 @@ class contatoAdmin(admin.ModelAdmin):
     search_fields = ['contato_nome']
     save_on_top = True
 admin.site.register(contato, contatoAdmin)
+
+
+class tarefaAdmin(admin.ModelAdmin):
+
+    model = tarefa
+    list_display = ['tarefa_nome', 'tarefa_data_inicio', 'concluido']
+    search_fields = ['tarefa_nome']
+    save_on_top = True
+admin.site.register(tarefa, tarefaAdmin)
