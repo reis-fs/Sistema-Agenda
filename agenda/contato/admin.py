@@ -26,5 +26,6 @@ class contaAdmin(admin.ModelAdmin):
     model = conta
     list_display = ['conta_nome', 'conta_data_vencimento', 'pago']
     search_fields = ['conta_nome']
+    list_filter = ['pago']
     save_on_top = True
 admin.site.register(conta, contaAdmin)
