@@ -30,3 +30,11 @@ class tarefa(models.Model):
     tarefa_nome = models.CharField(max_length=100)
     tarefa_data_inicio = models.DateField()
     concluido = models.BooleanField(verbose_name='Concluido')
+
+
+class conta(models.Model):
+
+    conta_id = models.AutoField(primary_key=True)
+    conta_nome = models.CharField(max_length=200)
+    conta_data_vencimento = models.DateField()
+    pago = models.BooleanField()
