@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class contato(models.Model):
+class Contato(models.Model):
 
     SEXO_CHOICES = (
         (u'masculino', u'Masculino'),
@@ -12,7 +12,7 @@ class contato(models.Model):
         (u'solteiro', u'Solteiro'),
         (u'casado', u'Casado'),
         (u'divorciado', u'Divorciado'),
-        (u'viuvo', u'Viuvo'),
+        (u'viúvo', u'Viúvo'),
     )
 
     contato_id = models.AutoField(primary_key=True)
@@ -24,7 +24,7 @@ class contato(models.Model):
     contato_favorito = models.BooleanField(verbose_name='Favorito')
 
 
-class tarefa(models.Model):
+class Tarefa(models.Model):
 
     tarefa_id = models.AutoField(primary_key=True)
     tarefa_nome = models.CharField(max_length=100)
@@ -32,7 +32,7 @@ class tarefa(models.Model):
     concluido = models.BooleanField(verbose_name='Concluido')
 
 
-class conta(models.Model):
+class Conta(models.Model):
 
     conta_id = models.AutoField(primary_key=True)
     conta_nome = models.CharField(max_length=200)
